@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+const textoOpcoes = ["Home","Produto","Cadastrar Produto", "teste"];
+
 const MenuConteiner = styled.ul`
      width: 40%;
     display: flex;    
@@ -14,9 +16,9 @@ const MenuConteiner = styled.ul`
 function Menu(){
     return(
         <MenuConteiner>
-                <li>Home</li>
-                <li>Produto</li>
-                <li>Cadastrar Produto</li>
+                <li>{textoOpcoes[0]}</li>
+                <li>{textoOpcoes[1]}</li>
+                <li>{textoOpcoes[2]}</li>
         </MenuConteiner> 
     );
 }

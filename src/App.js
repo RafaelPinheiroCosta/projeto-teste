@@ -1,13 +1,14 @@
-import './App.css';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
+import styled from 'styled-components';
 
+const AppContainer = styled.div`
 
+`
 function App() {
   return (
-    <div className="App">
+    <AppContainer>
         <Cabecalho/>
-    </div>
+    </AppContainer>
   );
 }
-
 export default App;
