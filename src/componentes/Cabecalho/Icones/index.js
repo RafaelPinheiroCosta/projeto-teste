@@ -1,6 +1,7 @@
 import React from "react";
 import imgLogin from "../../../imagens/imgLogin.png";
 import imgPesquisa from "../../../imagens/imgPesquisa.png";
+import "./style.css"
 
 function Icones() {
     return (
