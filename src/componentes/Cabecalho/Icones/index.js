@@ -1,14 +1,25 @@
 import React from "react";
 import imgLogin from "../../../imagens/imgLogin.png";
 import imgPesquisa from "../../../imagens/imgPesquisa.png";
-import "./style.css"
+import styled from "styled-components";
 
+const IconesContainer = styled.div`
+    width: 10%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #imgLogin, #imgPesquisa{
+        height: 90%;
+        margin: 10px;
+    }
+`
 function Icones() {
     return (
-        <div id="icones">
+        <IconesContainer>
             <img id="imgLogin" src={imgLogin} alt="" />
             <img id="imgPesquisa" src={imgPesquisa} alt="" />
-        </div>
+        </IconesContainer>
     );
 }
 export default Icones;

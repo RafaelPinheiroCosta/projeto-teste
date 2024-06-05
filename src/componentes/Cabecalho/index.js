@@ -2,15 +2,22 @@ import React from "react";
 import Icones from "./Icones";
 import Logo from "./Logo";
 import Menu from "./Menu";
-import './style.css';
+import styled from "styled-components";
 
+const CabecalhoContainer = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: blue;
+`
 function Cabecalho(){
     return(
-        <header id="cabecalho">            
+        <CabecalhoContainer>           
             <Logo/>
             <Menu/>
             <Icones/>
-        </header>
+        </CabecalhoContainer> 
     );
 }
 export default Cabecalho;
