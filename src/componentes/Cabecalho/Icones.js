@@ -1,6 +1,6 @@
 import React from "react";
-import imgLogin from "../../../imagens/imgLogin.png";
-import imgPesquisa from "../../../imagens/imgPesquisa.png";
+import imgLogin from "../../imagens/imgLogin.png";
+import imgPesquisa from "../../imagens/imgPesquisa.png";
 import styled from "styled-components";
 
 const IconesContainer = styled.div`

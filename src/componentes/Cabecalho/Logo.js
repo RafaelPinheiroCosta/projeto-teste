@@ -1,5 +1,5 @@
 import React from "react";
-import imgLogo from "../../../imagens/logoSenai.png";
+import imgLogo from "../../imagens/logoSenai.png";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
