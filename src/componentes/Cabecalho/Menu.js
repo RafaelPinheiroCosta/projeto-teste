@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const textoOpcoes = ["Home","Produto","Cadastrar Produto", "teste"];
+const textoOpcoes = ["Home", "Produto", "Cadastrar Produto", "teste", "qqq"];
 
 const MenuConteiner = styled.ul`
      width: 40%;
     display: flex;    
+    color: wheat;
     li{
         list-style: none;
         font-size: 30px;
@@ -13,13 +14,15 @@ const MenuConteiner = styled.ul`
         margin: 0 15px;
     }
 `
-function Menu(){
-    return(
+function Menu() {
+    return (
         <MenuConteiner>
-                <li>{textoOpcoes[0]}</li>
-                <li>{textoOpcoes[1]}</li>
-                <li>{textoOpcoes[2]}</li>
-        </MenuConteiner> 
+            {
+                textoOpcoes.map( (opcao) => (
+                    <li>{opcao}</li>
+                )) 
+            }
+        </MenuConteiner>
     );
 }
 export default Menu;

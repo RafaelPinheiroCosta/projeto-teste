@@ -2,6 +2,7 @@ import React from "react";
 import imgLogin from "../../imagens/imgLogin.png";
 import imgPesquisa from "../../imagens/imgPesquisa.png";
 import styled from "styled-components";
+const icones = [imgLogin,imgPesquisa];
 
 const IconesContainer = styled.div`
     width: 10%;
@@ -9,7 +10,7 @@ const IconesContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    #imgLogin, #imgPesquisa{
+    #icone{
         height: 90%;
         margin: 10px;
     }
@@ -17,8 +18,11 @@ const IconesContainer = styled.div`
 function Icones() {
     return (
         <IconesContainer>
-            <img id="imgLogin" src={imgLogin} alt="" />
-            <img id="imgPesquisa" src={imgPesquisa} alt="" />
+            {   icones.map( (icone) =>(
+                        <img id="icone" src={icone} alt="" />
+                    )
+                )
+            }
         </IconesContainer>
     );
 }
