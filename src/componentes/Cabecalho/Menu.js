@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const textoOpcoes = ["Home", "Produto", "Cadastrar Produto", "teste", "qqq"];
+const textoOpcoes = ["Home", "Produto", "Cadastrar Produto"];
 
 const MenuConteiner = styled.ul`
      width: 40%;
     display: flex;    
-    color: wheat;
+    color: white;
     li{
         list-style: none;
         font-size: 30px;
