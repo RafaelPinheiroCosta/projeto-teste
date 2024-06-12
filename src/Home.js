@@ -5,12 +5,11 @@ import Corpo from './componentes/Corpo/Corpo';
 const AppContainer = styled.div`
 
 `
-function App() {
+function Home() {
   return (
-    <AppContainer>
-        <Cabecalho/>
+    <AppContainer>       
         <Corpo/>
     </AppContainer>
   );
 }
-export default App;
+export default Home;

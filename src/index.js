@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import Cabecalho from './componentes/Cabecalho/Cabecalho';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -24,7 +26,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>    
     <GlobalStyle/>
-    <App />
+    <BrowserRouter>
+      <Cabecalho/>
+      <Routes>
+        <Route path='/home' element={<Home />}/>
+        <Route path='/produto' element={<h1>Produto</h1>}/>
+        <Route path='/cadastrarproduto' element={<h1>Cadastrar</h1>}/>
+      </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 

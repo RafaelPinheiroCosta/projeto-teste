@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const textoOpcoes = ["Home", "Produto", "Cadastrar Produto"];
@@ -19,7 +20,15 @@ function Menu() {
         <MenuConteiner>
             {
                 textoOpcoes.map( (opcao) => (
-                    <li>{opcao}</li>
+                    <Link
+                     to={`/${opcao.replace(/\s+/g,'').toLowerCase()}`}
+                     style={{
+                        color:"white",
+                        textDecoration: 'none'
+                     }}
+                    >
+                        <li>{opcao}</li>
+                    </Link>
                 )) 
             }
         </MenuConteiner>
