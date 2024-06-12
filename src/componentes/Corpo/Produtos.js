@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {produtos} from "../../produtosCadastrados";
 import CardProduto from "./CardProduto";
+import { useState } from "react";
 
 const ProdutosContainer = styled.section`
     display: flex;
@@ -16,14 +17,33 @@ const CardProdutosContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    gap:20px
+    gap:20px;
+`
+const Pesquisa = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 function Produtos(){
+    const [produtoFiltrados, setProdutoFiltrados] = useState(produtos);
     return(
         <ProdutosContainer>
+            <Pesquisa>
+                <h2>Pesquise seu produto aqui</h2>
+                <input 
+                    placeholder="Digite o produto" 
+                    onChange={evento => {
+                            const produtoDigitado = evento.target.value;
+                            const resultadoFiltro = produtos.filter(
+                                produto => produto.nome.includes(produtoDigitado) 
+                            )
+                            setProdutoFiltrados(resultadoFiltro)
+                        }
+                    }
+                />
+            </Pesquisa>
             <CardProdutosContainer>
                 {
-                    produtos.map( produto =>(
+                    produtoFiltrados.map( produto =>(
                         <CardProduto
                             nomeProduto={produto.nome}
                             precoProduto={produto.preco}
