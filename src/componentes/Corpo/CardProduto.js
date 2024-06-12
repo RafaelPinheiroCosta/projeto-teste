@@ -13,7 +13,7 @@ const CardProdutoContainer = styled.div`
     border-radius: 10px;    
 `
 const NomeProduto = styled.h3`
-
+    color: ${props => props.corNomeProduto || "blue"};
 `
 const PrecoProduto = styled.h4`
 
@@ -28,12 +28,13 @@ function CardProduto({
                         nomeProduto,
                         precoProduto,
                         descricaoProduto,
-                        imgProduto
+                        imgProduto,
+                        corNomeProduto
                     }){
     return(
         <CardProdutoContainer>
             <ImgProduto src= {imgProduto}/>
-            <NomeProduto>{nomeProduto}</NomeProduto>
+            <NomeProduto corNomeProduto = {corNomeProduto}>{nomeProduto}</NomeProduto>
             <PrecoProduto>{precoProduto}</PrecoProduto>
             <DescricaoProduto>{descricaoProduto}</DescricaoProduto>                   
         </CardProdutoContainer>

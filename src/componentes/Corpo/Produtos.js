@@ -49,6 +49,7 @@ function Produtos(){
                             precoProduto={produto.preco}
                             descricaoProduto={produto.descricao}
                             imgProduto={produto.img}
+                            corNomeProduto={"white"}
                         />
                     ))
                 }
