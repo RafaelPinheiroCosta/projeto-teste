@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Pesquisa from "./Pesquisa";
+import Produtos from "./Produtos";
 
 const CorpoContainer = styled.main`
     background-color: darkcyan;
@@ -11,7 +11,7 @@ const CorpoContainer = styled.main`
 function Corpo(){
     return(
         <CorpoContainer>
-            <Pesquisa/>
+           <Produtos/>
         </CorpoContainer>
     );
 }

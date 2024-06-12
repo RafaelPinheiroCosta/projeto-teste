@@ -22,7 +22,7 @@ const DescricaoProduto = styled.p`
 
 `
 const ImgProduto = styled.img`
-width: 90%;
+    width: 90%;
 `
 function CardProduto({
                         nomeProduto,
