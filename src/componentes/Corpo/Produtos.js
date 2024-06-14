@@ -3,6 +3,14 @@ import styled from "styled-components";
 import {produtos} from "../../produtosCadastrados";
 import CardProduto from "./CardProduto";
 import { useState } from "react";
+import { Autocomplete, Button, TextField } from "@mui/material";
+
+const top100Films = [
+    { label: 'The Shawshank Redemption', year: 1994 },
+    { label: 'The Godfather', year: 1972 },
+    { label: 'The Godfather: Part II', year: 1974 },
+    { label: 'The Dark Knight', year: 2008 },
+]
 
 const ProdutosContainer = styled.section`
     display: flex;
@@ -41,6 +49,20 @@ function Produtos(){
                     }
                 />
             </Pesquisa>
+
+            <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={top100Films}
+                sx={{ 
+                    width: 300,
+                    borderColor: "white"
+                }}
+                renderInput={(params) => <TextField {...params} label="Movie" />}
+            />
+
+            <Button variant="contained" color="secondary" >Text</Button>
+
             <CardProdutosContainer>
                 {
                     produtoFiltrados.map( produto =>(

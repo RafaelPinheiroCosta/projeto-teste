@@ -21,11 +21,11 @@ function Menu() {
             {
                 textoOpcoes.map( (opcao) => (
                     <Link
-                     to={`/${opcao.replace(/\s+/g,'').toLowerCase()}`}
-                     style={{
-                        color:"white",
-                        textDecoration: 'none'
-                     }}
+                        to={`/${opcao.replace(/\s+/g,'').toLowerCase()}`}
+                        style={{
+                            color:"white",
+                            textDecoration: 'none'
+                        }}
                     >
                         <li>{opcao}</li>
                     </Link>
