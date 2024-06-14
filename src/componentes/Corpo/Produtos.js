@@ -4,6 +4,7 @@ import {produtos} from "../../produtosCadastrados";
 import CardProduto from "./CardProduto";
 import { useState } from "react";
 import { Autocomplete, Button, TextField } from "@mui/material";
+import { DeleteOutline } from "@mui/icons-material";
 
 const top100Films = [
     { label: 'The Shawshank Redemption', year: 1994 },
@@ -31,8 +32,15 @@ const Pesquisa = styled.div`
     display: flex;
     flex-direction: column;
 `
+
+function teste(){
+    alert("vc apertou o botao")
+}
+
 function Produtos(){
     const [produtoFiltrados, setProdutoFiltrados] = useState(produtos);
+
+
     return(
         <ProdutosContainer>
             <Pesquisa>
@@ -61,7 +69,12 @@ function Produtos(){
                 renderInput={(params) => <TextField {...params} label="Movie" />}
             />
 
-            <Button variant="contained" color="secondary" >Text</Button>
+            <Button 
+                variant="contained" 
+                color="secondary" 
+                onClick={teste}  
+                startIcon={<DeleteOutline/>}          
+            >Text</Button>
 
             <CardProdutosContainer>
                 {
