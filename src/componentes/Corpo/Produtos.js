@@ -44,9 +44,9 @@ function Produtos(){
     return(
         <ProdutosContainer>
             <Pesquisa>
-                <h2>Pesquise seu produto aqui</h2>
+                <h2>Pesquise seu Produto aqui</h2>
                 <input 
-                    placeholder="Digite o produto" 
+                    placeholder="Digite o Produto" 
                     onChange={evento => {
                             const produtoDigitado = evento.target.value;
                             const resultadoFiltro = produtos.filter(

@@ -11,7 +11,8 @@ const IconesContainer = styled.div`
     justify-content: center;
     align-items: center;
     #icone{
-        height: 90%;
+        height: 40px;
+        width: 40px;
         margin: 10px;
     }
 `

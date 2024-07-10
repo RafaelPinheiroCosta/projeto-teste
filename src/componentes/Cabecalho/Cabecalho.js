@@ -8,8 +8,8 @@ const CabecalhoContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
-    background-color: blue;
+    height: 15vh;
+    background-color: #E8D6BA;
 `
 function Cabecalho(){
     return(

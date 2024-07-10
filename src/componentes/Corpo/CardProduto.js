@@ -6,11 +6,11 @@ const CardProdutoContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    width: 250px;
-    background-color: gray;
+    height: 400px;
+    width: 280px;
+    background-color: rgb(213, 170, 137);
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    border-radius: 10px;    
+    border-radius: 18px;    
 `
 const NomeProduto = styled.h3`
     color: ${props => props.corNomeProduto || "blue"};
@@ -22,7 +22,8 @@ const DescricaoProduto = styled.p`
 
 `
 const ImgProduto = styled.img`
-    width: 90%;
+    width: 75%;
+    border-radius: 100px;
 `
 function CardProduto({
                         nomeProduto,

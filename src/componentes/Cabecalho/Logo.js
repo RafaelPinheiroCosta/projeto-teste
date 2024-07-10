@@ -1,5 +1,5 @@
 import React from "react";
-import imgLogo from "../../imagens/logoSenai.png";
+import imgLogo from "../../imagens/Horizon (1).png";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
@@ -10,20 +10,21 @@ const LogoContainer = styled.div`
     align-items: center;
     margin-left: 20px;
     #imgLogo{
-        width: 100%;
+      border-radius: 999px;
+      
+      height: 180px;
     }
     #textoLogo{
         margin: 0;
         padding: 0;
         font-size: 20px;
-        color: white;
+        color: #000;
     }
 `
 function Logo(){
     return(
         <LogoContainer>
                 <img id="imgLogo" src={imgLogo} alt=""/>
-                <h4 id="textoLogo">"Anchieta"</h4>
         </LogoContainer>
     );
 }

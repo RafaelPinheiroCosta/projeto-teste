@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Produtos from "./Produtos";
 
 const CorpoContainer = styled.main`
-    background-color: darkcyan;
+    background:rgb(179, 128, 98);
     height: 90vh;
     display: flex;
     justify-content: center;
